@@ -1,15 +1,13 @@
 ## Overview
 
-This is the PyTorch implementation of paper [CSIYOLO: An Intelligent CSI-based Scatter
-Sensing Framework for Integrated Sensing and
-Communication Systems](https://arxiv.org).
+This is the PyTorch implementation of paper [CSIYOLO: An Intelligent CSI-based Scatter Sensing Framework for Integrated Sensing and Communication Systems](https://arxiv.org), which has been submitted to IEEE for possible publication.
 
 ## Requirements
 
 To use this project, please ensure the following dependencies are installed:
 
-- Python >= 3.8
-- PyTorch >= 1.13.0
+- [Python >= 3.8](https://www.python.org/)
+- [PyTorch >= 1.13.0](https://pytorch.org/get-started/previous-versions/#v1130)
 - numpy
 - scipy
 - tqdm
@@ -25,7 +23,7 @@ You can also generate your own dataset based on the Saleh-Valenzuela channel mod
 
 ## Checkpoints Downloading
 
-The model checkpoints should be downloaded if you would like to reproduce our results. All the checkpoints can be downloaded from [Google Drive]() or [Baidu Netdisk]().
+The model checkpoints should be downloaded if you would like to reproduce our results. The checkpoints can be downloaded from [Google Drive]() or [Baidu Netdisk]().
 
 ## Project Structure
 
@@ -59,7 +57,7 @@ home
 
 ### Training from scratch
 
-An example of `run_train.sh` is provided under the scripts. Simply use it with `bash ./scripts/run_train.sh`. 
+An example of `run_train.sh` is provided under the scripts. Simply use it with `bash ./scripts/run_train.sh`. It will start the CSIYOLO training from scratch, with validation and testing.
 
 Example usage:
 ```bash
@@ -67,7 +65,7 @@ python /home/csiyolo/tools/train.py \
     --imgsz 64 \    # input image size.
     --batch-size 64 \   # batchsize for training.
     --Ns-max 10 \   # maximum number of scatters for process.
-    --cfg "home/csiyolo/configs/config.yaml" \  # configuration file for the model, which controls the detailed model architecture such as h.
+    --cfg "/home/csiyolo/configs/config.yaml" \  # configuration file for the model, which controls the detailed model architecture such as h.
     --data-path "/home/data/" \   # path to the data files.
     --epochs 100 \  # number of training epochs.
     --device 0 \    # GPU device for training. 
@@ -75,7 +73,7 @@ python /home/csiyolo/tools/train.py \
     --noise-bound 0 \  # maximum injected noise variance for training. Set to 0 for no noise injection.
     --detect-thres 1 \  # distance threshold for detection. Default 1m in this experiment.
     --val-freq 10 \ # validation frequency.
-    --test-freq 20 \ # test frequency.
+    --test-freq 20    # test frequency.
 ```
 
 
@@ -90,16 +88,16 @@ python ./tools/val.py \
     --imgsz 64 \    # input image size.
     --batch-size 64 \   # batchsize for testing.
     --data-path "/home/data/" \ # path to the data files.
-    --device 0 \    # GPU device for training.
+    --device 0 \    # GPU device for testing.
     --project '/home/runs/eval' \     # directory for the testing logs and results.
-    --pretrained '/home/checkpoints/h_5.pt' \   # path to the evaluated model.
-    --cfg "/home/csiyolo/configs/config.yaml" \ # configuration file for the model, which controls the detailed model architecture such as h.
-    --detect-thres 1 \  # distance threshold for detection. Default 1m in this experiment.
+    --pretrained '/home/checkpoints/h5/ckpt.pt' \   # path to the evaluated model.
+    --cfg "/home/checkpoints/h5/config.yaml" \ # configuration file for the model, which controls the detailed model architecture such as h.
+    --detect-thres 1    # distance threshold for detection. Default 1m in this experiment.
 ```
 
 ## Results and Reproduction
 
-The main results reported in our paper are presented as follows. All the listed results can be found in Fig. 14 of the paper. They are achieved from training CSIYOLO with different hidden channel depths. Both the training and testing datasets are consisted of samples with different numbers of scatters.
+The main results reported in our paper are presented as follows. All the listed results can be found in Fig. 14 of the paper. They are achieved from training CSIYOLO with different hidden channel depths. Both the training and testing datasets are consisted of samples with varying numbers of scatters from 5 to 10.
 
 The main results achieved by this repository are summarized below.  
 
@@ -111,10 +109,9 @@ Depth of <br> hidden channels | F1-score | Probability <br> of detection | RMSE(
 3 | 0.9496 | 0.9362 | 0.2317  | 8.571K | 6.934M | h3/ckpt.pt |
 5 | 0.9693 | 0.9595 | 0.1949 | 23.069K | 17.930M | h5/ckpt.pt |
 7 | 0.9770 | 0.9682 | 0.1579 | 44.647K | 34.136M | h7/ckpt.pt |
-LTD: known | 0.6359 | 0.6312 | 0.6045 | \ | \ | \ |
-MUSIC-FFT | 0.5704 | 0.5708 | 0.6031 | \ | \ | \ |
 
-The corresponding comparison figuer is shown below.
+
+The corresponding comparison figure is shown below.
 ![Fig. 14](./resource/fig1.png)
 
 
