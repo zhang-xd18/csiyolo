@@ -17,13 +17,13 @@ To use this project, please ensure the following dependencies are installed:
 ## Data Preparation
 
 
-The channel state information (CSI) matrix is generated according to the Saleh-Valenzuela channel model using MATLAB. The detailed parameters are listed in Table I of the paper. We also provide a pre-processed version for direct download in [Google Drive](), which is easier to use for this task. You can also download it from [Baidu Netdisk]().
+The channel state information (CSI) matrix is generated according to the Saleh-Valenzuela channel model using MATLAB. The detailed parameters are listed in Table I of the paper. We also provide a pre-processed version for direct download in [Google Drive](https://drive.google.com/drive/folders/1fU6WrnS5_C6KRfWzy741IKJOUGSOkP7X?usp=sharing), which is easier to use for this task. You can also download it from [Baidu Netdisk](https://pan.baidu.com/s/1mvzeEoCET3X9xYdL0arjTQ?pwd=x966).
 You can also generate your own dataset based on the Saleh-Valenzuela channel model. The details of data generation and pre-processing can be found in our paper.
 
 
 ## Checkpoints Downloading
 
-The model checkpoints should be downloaded if you would like to reproduce our results. The checkpoints can be downloaded from [Google Drive]() or [Baidu Netdisk]().
+The model checkpoints should be downloaded if you would like to reproduce our results. The checkpoints can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1dxp3aqC82f5UI2jMmo10OHiQuRKpaR_8?usp=sharing) or [Baidu Netdisk](https://pan.baidu.com/s/160rnINduc_lvMHNhxkXFIA?pwd=u86y).
 
 ## Project Structure
 
