@@ -1,6 +1,6 @@
 ## Overview
 
-This is the PyTorch implementation of paper [CSIYOLO: An Intelligent CSI-based Scatter Sensing Framework for Integrated Sensing and Communication Systems](https://arxiv.org), which has been submitted to IEEE for possible publication.
+This is the PyTorch implementation of paper [CSIYOLO: An Intelligent CSI-based Scatter Sensing Framework for Integrated Sensing and Communication Systems](https://arxiv.org/abs/2509.19335), which has been submitted to IEEE for possible publication.
 
 ## Requirements
 
