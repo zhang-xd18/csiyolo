@@ -114,6 +114,15 @@ Depth of <br> hidden channels | F1-score | Probability <br> of detection | RMSE(
 The corresponding comparison figure is shown below.
 ![Fig. 14](./resource/fig1.png)
 
+## Cite
+```
+@article{zhang2025csiyolo,
+    title={CSIYOLO: An Intelligent CSI-based Scatter Sensing Framework for Integrated Sensing and Communication Systems}, 
+    author={Xudong Zhang and Jingbo Tan and Zhizhen Ren and Jintao Wang and Yihua Ma and Jian Song},
+    journal={arXiv preprint arXiv:2509.19335},
+    year={2025},
+}
+```
 
 ## Acknowledgment
 
