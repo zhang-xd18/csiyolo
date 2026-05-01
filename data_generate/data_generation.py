@@ -85,7 +85,7 @@ def generate_SU_channel(p_BS, p_UE, p_s, Ns, config=DataConfig(), saveraw=False)
     Para_s = np.zeros((Ns + 1, 2))
 
     # determine the number of activated scatters/links
-    NL = Ns  # TODO: currently the fixed number of scatters
+    NL = Ns
     index = np.sort(np.random.permutation(Ns)[:NL])  # random select activated scatters
     p_s_i = np.vstack((p_UE, p_s[index, :]))
     P_s[:NL + 1, :] = p_s_i  # store positions of activated scatters
